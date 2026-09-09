@@ -1,0 +1,55 @@
+
+
+/* Small phones */
+@media (max-width: 400px) {
+  .hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-ctas .btn {
+    justify-content: center;
+  }
+
+  .contact-links a {
+    flex-direction: column;
+    gap: var(--space-3xs);
+  }
+}
+
+/* Large / wide screens — cap line lengths from stretching too far */
+@media (min-width: 1400px) {
+  :root {
+    --content-width: 1280px;
+  }
+}
+
+/* Landscape phones — hero shouldn't force a huge scroll before CTAs */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero {
+    padding-block: var(--space-lg);
+  }
+}
+
+/* Print — flatten to something legible on paper (e.g. printing a resume page) */
+@media print {
+  .site-header,
+  .theme-toggle,
+  .nav-toggle,
+  .hero-art,
+  .work-visual,
+  .currently,
+  .skip-link {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .section {
+    border-top-color: #ccc;
+    padding-block: var(--space-lg);
+  }
+}
