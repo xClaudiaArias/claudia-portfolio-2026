@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VITA — Case Study — Claudia</title>
-  <meta name="description" content="Case study: VITA, a calmer, connected job-search companion for tracking applications, resumes, and interview prep." />
+  <title>Clinic Intake &amp; Scheduling Portal — Case Study — Claudia</title>
+  <meta name="description" content="Case study: a clinic intake and scheduling portal separating a patient registration flow from a staff intake dashboard, built with HIPAA-informed principles." />
 
-  <!-- Set theme before first paint to avoid a flash of the wrong theme.
-       Kept inline (not in theme.js) specifically so it runs before CSS/layout. -->
   <script>
     (function () {
       try {
@@ -78,35 +76,34 @@
     <!-- ============================ PROJECT HERO ========================== -->
     <section class="case-hero" aria-label="Project introduction">
       <div class="container">
-        <span class="work-kicker">In progress</span>
-        <h1>VITA</h1>
-        <p class="case-tagline">A calmer way to navigate the job search.</p>
+        <span class="work-kicker">Portfolio project</span>
+        <h1>Clinic Intake &amp; Scheduling Portal</h1>
+        <p class="case-tagline">A streamlined experience for patient registration, scheduling, and clinic intake.</p>
         <p class="case-description">
-          A personal job-search companion designed to help applicants
-          organize applications, prepare for interviews, manage resumes,
-          and keep momentum during the job-search process.
+          A web application designed to simplify patient self-registration,
+          appointment scheduling, pre-visit symptom collection, and staff
+          intake workflows.
         </p>
 
         <dl class="work-specs">
           <div>
             <dt>Role</dt>
-            <dd>Solo full-stack developer — product, design system, and engineering</dd>
+            <dd>[Add your role]</dd>
           </div>
           <div>
             <dt>Tech</dt>
-            <dd>React (Vite) · Node.js · PostgreSQL · JWT authentication</dd>
+            <dd>React (Vite) · Node.js/Express · PostgreSQL · Prisma</dd>
           </div>
           <div>
             <dt>Status</dt>
-            <dd>In development</dd>
+            <dd>[Add project status]</dd>
           </div>
         </dl>
 
         <div class="hero-ctas">
           <a class="btn btn-secondary" href="#">GitHub</a>
-          <span class="sr-only">Live demo not yet available</span>
         </div>
-        <!-- Add a "Live Demo" button here once VITA has one -->
+        <!-- Add a "Live Demo" button here once one exists -->
       </div>
     </section>
 
@@ -117,13 +114,13 @@
           <h2 id="overview-heading">Overview</h2>
         </div>
         <p class="measure reveal">
-          VITA is a personal job-search companion — a single place to track
-          applications, manage resumes, and prepare for interviews, instead
-          of juggling spreadsheets, saved documents, and scattered browser
-          tabs. It's built for job seekers, particularly students and
-          early-career applicants, doing the day-to-day work of a search:
-          sending applications, tracking where each one stands, and getting
-          ready for interviews without losing momentum.
+          This is a full-stack web app for a clinic setting — a
+          patient-facing experience for registering and booking
+          appointments, and a separate staff dashboard for managing intake
+          and scheduling. It's built for clinics that need registration
+          and scheduling handled online rather than over the phone or on
+          paper, and for the staff who have to keep track of who's coming
+          in and why.
         </p>
       </div>
     </section>
@@ -135,19 +132,17 @@
           <h2 id="problem-heading">The problem</h2>
         </div>
         <p class="measure reveal">
-          Job searching means managing a lot of moving pieces at once —
-          resumes, applications, interview prep,  usually spread across a
-          spreadsheet, a resume folder, and whatever job board sent the
-          last email. Nothing connects those pieces together, so it's easy
-          to lose track of where an application stands or what needs to
-          happen next. On top of that, most job-search tools are built like
-          clinical dashboards that track outcomes without much regard for
-          how discouraging a long search can feel.
+          Patients and clinic staff both need a straightforward way to
+          handle registration and appointment information — patients need
+          to register and book without friction, and staff need a clear,
+          centralized view of who's scheduled and what they've already
+          shared with the clinic before they arrive.
         </p>
         <p class="measure reveal">
-          <em>This is based on my own experience going through a job
-          search, rather than formal user research — I haven't run
-          structured interviews or usability studies on this yet.</em>
+          <em>I built this as a portfolio project rather than for a
+          specific clinic, so this is based on general research into
+          clinic intake workflows rather than direct interviews with
+          clinic staff or patients.</em>
         </p>
       </div>
     </section>
@@ -159,16 +154,20 @@
           <h2 id="approach-heading">The approach</h2>
         </div>
         <p class="measure reveal">
-          I wanted VITA to feel like a companion, not a scoreboard —
-          something that supports momentum instead of just recording
-          outcomes. Design priorities:
+          Rather than building one shared interface for two very different
+          audiences, I split the experience: a patient-facing registration
+          and booking flow, and a separate staff dashboard, while keeping
+          the underlying data model consistent between them. Because this
+          handles patient information, I treated it as a HIPAA-informed
+          project from the start rather than adding privacy considerations
+          later. Design priorities:
         </p>
         <ul class="goal-list reveal">
-          <li>Keep resumes, applications, and interview prep connected instead of siloed</li>
-          <li>Encouraging language, an application can be marked "Not this time" instead of "Rejected," which feels less punishing in a process that already has a lot of rejection built in</li>
-          <li>Clear information hierarchy, so it's obvious what needs attention next</li>
-          <li>Enough structure to stay organized without the tool feeling like more homework</li>
-          <li>Accessible, responsive, and maintainable from the start, not bolted on later</li>
+          <li>Separate, purpose-built experiences for patients and staff</li>
+          <li>HIPAA-informed handling of patient data — audit logging, role-based access control, encryption-ready fields</li>
+          <li>A clear, multi-section intake form that doesn't overwhelm patients</li>
+          <li>A staff dashboard organized around the week's appointments, not a raw data table</li>
+          <li>A maintainable monorepo structure so frontend and backend stay in sync</li>
         </ul>
       </div>
     </section>
@@ -180,15 +179,13 @@
           <h2 id="design-heading">Design &amp; UX</h2>
         </div>
         <p class="measure reveal">
-          The interface is organized around a small set of core areas — a
-          dashboard, resumes, a resume scanner, an application tracker, a
-          portfolio section, and interview prep, rather than one dense,
-          everything-at-once view. The visual design was built as a custom
-          system specifically for VITA, rather than pulled from a UI kit,
-          so the "calm companion" feeling stays consistent throughout
-          instead of being layered on top of default components.
+          The patient-facing flow is a multi-section intake form, broken
+          into steps rather than one long form. The staff dashboard is
+          organized around a weekly appointment view, so staff can see
+          what's coming up instead of scrolling a flat list of every
+          appointment ever booked.
         </p>
-        <div class="media-placeholder reveal" role="img" aria-label="Placeholder for a VITA interface screenshot">
+        <div class="media-placeholder reveal" role="img" aria-label="Placeholder for a Clinic Intake and Scheduling Portal screenshot">
           [Project screenshot goes here]
         </div>
       </div>
@@ -202,28 +199,20 @@
         </div>
         <div class="feature-grid reveal">
           <div class="feature">
-            <h3>Dashboard</h3>
-            <p>A home base that surfaces what's active and needs attention, instead of requiring a trip through every section to find it.</p>
+            <h3>Patient self-registration</h3>
+            <p>Patients can register themselves online instead of over the phone or on paper.</p>
           </div>
           <div class="feature">
-            <h3>Resume management with AI parsing</h3>
-            <p>Resumes are parsed automatically so their content becomes structured, reusable data instead of a static file.</p>
+            <h3>Appointment scheduling</h3>
+            <p>Patients can see available times and book an appointment directly.</p>
           </div>
           <div class="feature">
-            <h3>Resume scanner</h3>
-            <p>Checks a resume against a specific job posting to help tailor it, rather than sending the same version everywhere.</p>
+            <h3>Pre-visit symptom collection</h3>
+            <p>Patients share relevant information before their visit, so staff have context going in.</p>
           </div>
           <div class="feature">
-            <h3>Application tracker</h3>
-            <p>Tracks where each application actually stands, using language that doesn't treat a "no" as a dead end.</p>
-          </div>
-          <div class="feature">
-            <h3>Interview prep</h3>
-            <p>A dedicated space to prepare for interviews tied to a specific application, instead of prepping in the abstract.</p>
-          </div>
-          <div class="feature">
-            <h3>Portfolio</h3>
-            <p>A place to keep portfolio-relevant material connected to the rest of the job-search process.</p>
+            <h3>Staff intake dashboard</h3>
+            <p>A weekly view of upcoming appointments and patient-submitted intake information, in one place, for staff.</p>
           </div>
         </div>
       </div>
@@ -236,12 +225,15 @@
           <h2 id="technical-heading">Technical implementation</h2>
         </div>
         <p class="measure reveal">
-          VITA is a full-stack app: a React (Vite) frontend talking to a
-          Node.js backend, with PostgreSQL as the database across a schema
-          of about ten related tables, resumes, applications, interview
-          prep, and more modeled as connected data rather than separate,
-          disconnected records. Authentication uses JWTs. AI-assisted
-          features, like resume parsing, call the Anthropic API.
+          The frontend is built with React (via Vite); the backend is a
+          Node.js/Express API using Prisma as the ORM over a PostgreSQL
+          database. The project is structured as a monorepo so the
+          frontend and backend live and evolve together. Authentication
+          uses JWTs with refresh tokens. Because the app handles patient
+          data, it was built with HIPAA-informed principles from the
+          start: audit logging, role-based access control, and
+          encryption-ready fields in the schema — even though this is a
+          portfolio project rather than a deployed clinical system.
         </p>
       </div>
     </section>
@@ -254,20 +246,20 @@
         </div>
         <div class="reveal">
           <div class="challenge-block">
-            <h3>Challenge: local PostgreSQL environment conflicts</h3>
-            <p>My machine had multiple competing PostgreSQL installations and versions, which caused connection and version-mismatch issues that were confusing to debug — the kind of problem that has nothing to do with the actual app but can stall progress for a while.</p>
+            <h3>Challenge: designing for two very different users in one system</h3>
+            <p>Patients and staff need very different things from the same underlying data — patients need a simple, guided flow; staff need a dense, at-a-glance operational view.</p>
             <p class="challenge-label">Solution</p>
-            <p>I tracked down and resolved the competing installations so the project could reliably connect to the right PostgreSQL instance, and documented the fix instead of solving it from memory next time.</p>
+            <p>I split the frontend into a patient-facing flow and a separate staff dashboard, sharing the same backend and data model instead of duplicating logic.</p>
             <p class="challenge-label">Result</p>
-            <p>A stable local setup, and a clearer mental model of how PostgreSQL installations can conflict on macOS, something I now check for early on any new project.</p>
+            <p>Each side of the app could be designed around what its actual user needed, without compromising either experience.</p>
           </div>
           <div class="challenge-block">
-            <h3>Challenge: making status updates feel encouraging instead of punishing</h3>
-            <p>A lot of job-search tools describe outcomes in blunt, clinical terms, "Rejected," "Declined", which can be discouraging over a long search.</p>
+            <h3>Challenge: the same PostgreSQL environment conflicts I'd hit on VITA</h3>
+            <p>Multiple competing PostgreSQL installations on my machine caused version and connection issues here too.</p>
             <p class="challenge-label">Solution</p>
-            <p>I chose more neutral, momentum-oriented language throughout the app, for example, "Not this time" instead of "Rejected", so the product doesn't read like it's keeping score against the user.</p>
+            <p>Having already solved this on VITA, I recognized and resolved it much faster the second time around.</p>
             <p class="challenge-label">Result</p>
-            <p><em>This is a design decision I'm still refining, I don't have user feedback on it yet, since VITA isn't in front of other users.</em></p>
+            <p>A reliable local database connection, and confirmation that documenting a fix the first time actually pays off later.</p>
           </div>
         </div>
       </div>
@@ -279,16 +271,12 @@
         <div class="section-head reveal">
           <h2 id="a11y-heading">Accessibility &amp; responsive design</h2>
         </div>
-        <p class="measure reveal">
-          VITA is still in development, so accessibility work is ongoing
-          rather than finished:
-        </p>
         <ul class="goal-list reveal">
-          <li>Semantic HTML and heading structure throughout</li>
-          <li>Visible focus states on interactive elements</li>
-          <li>Responsive layouts for the core dashboard and tracker views</li>
-          <li><em>A full keyboard-navigation and screen-reader pass is still on the to-do list, not yet complete</em></li>
-          <li><em>Reduced-motion support and a color-contrast audit specific to VITA are planned but not yet verified</em></li>
+          <li>Semantic HTML across the patient form and staff dashboard</li>
+          <li>A multi-section form broken into manageable steps rather than one long page</li>
+          <li>Responsive layouts for both the patient- and staff-facing views</li>
+          <li><em>Full keyboard-navigation and screen-reader testing across both flows is still to be done</em></li>
+          <li><em>A color-contrast audit and reduced-motion support are planned but not yet verified for this project specifically</em></li>
         </ul>
       </div>
     </section>
@@ -300,18 +288,17 @@
           <h2 id="learned-heading">What I learned</h2>
         </div>
         <p class="measure reveal">
-          Modeling resumes, applications, and interview prep as connected
-          data rather than separate features bolted together forced me
-          to think through the schema much earlier than I would have on a
-          smaller project; about ten related tables ended up feeling like
-          the right level of structure. I also learned that the local
-          PostgreSQL conflicts I kept running into weren't a one-off fluke
-          — documenting the fix properly saved me from re-debugging the
-          exact same issue on a later project. On the product side,
-          choosing language like "Not this time" over "Rejected" made me
-          pay much closer attention to tone as a UX decision, not just a
-          copywriting afterthought, small wording changes really do
-          change how a tool feels to use.
+          Splitting the patient and staff experiences instead of forcing
+          one shared interface made both sides simpler to design and
+          build — it's a decision I'd default to earlier next time rather
+          than trying to unify them first. Treating HIPAA-informed
+          handling — audit logging, RBAC, encryption-ready fields — as a
+          first-class requirement from the start, rather than an
+          afterthought, also shaped the data model in ways that would have
+          been harder to retrofit later. And running into the same
+          PostgreSQL environment issue I'd already hit on VITA reinforced
+          that documenting a fix the first time is worth the extra few
+          minutes.
         </p>
       </div>
     </section>
@@ -323,10 +310,9 @@
           <h2 id="future-heading">Future improvements</h2>
         </div>
         <ul class="goal-list reveal">
-          <li>Finish a full accessibility pass (screen reader and keyboard testing)</li>
-          <li>Add reduced-motion support specific to VITA's interface</li>
-          <li>Usability testing with real job seekers</li>
-          <li>Deploy a live demo</li>
+          <li>A full accessibility pass across both patient and staff flows</li>
+          <li>Usability testing with real patients and clinic staff</li>
+          <li>Deploy a live, demo-able version</li>
         </ul>
       </div>
     </section>
@@ -336,8 +322,8 @@
       <div class="container">
         <h2 id="case-cta-heading">Want to see it in action?</h2>
         <p class="contact-lede">
-          VITA is still under active development. The code is the best
-          place to look for now, a live demo is on the way.
+          The code is the best place to look for now — a live demo is on
+          the way.
         </p>
         <div class="hero-ctas">
           <a class="btn btn-secondary" href="#">View Source Code</a>
