@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VITA — Case Study — Maria</title>
+  <meta name="description" content="Case study: VITA, a calmer, connected job-search companion for tracking applications, resumes, and interview prep." />
+
+  <!-- Set theme before first paint to avoid a flash of the wrong theme.
+       Kept inline (not in theme.js) specifically so it runs before CSS/layout. -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("portfolio-theme");
+        var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/case-study.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="wordmark" href="../index.html">Maria</a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links" data-open="false">
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#approach">Approach</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <a class="back-link" href="../index.html#work">&larr; Back to Work</a>
+    </div>
+
+    <!-- ============================ PROJECT HERO ========================== -->
+    <section class="case-hero" aria-label="Project introduction">
+      <div class="container">
+        <span class="work-kicker">In progress</span>
+        <h1>VITA</h1>
+        <p class="case-tagline">A calmer way to navigate the job search.</p>
+        <p class="case-description">
+          A personal job-search companion designed to help applicants
+          organize applications, prepare for interviews, manage resumes,
+          and keep momentum during the job-search process.
+        </p>
+
+        <dl class="work-specs">
+          <div>
+            <dt>Role</dt>
+            <dd>Solo full-stack developer — product, design system, and engineering</dd>
+          </div>
+          <div>
+            <dt>Tech</dt>
+            <dd>React (Vite) · Node.js · PostgreSQL · JWT authentication</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>In development</dd>
+          </div>
+        </dl>
+
+        <div class="hero-ctas">
+          <a class="btn btn-secondary" href="#">GitHub</a>
+          <span class="sr-only">Live demo not yet available</span>
+        </div>
+        <!-- Add a "Live Demo" button here once VITA has one -->
+      </div>
+    </section>
+
+    <!-- ============================== OVERVIEW ============================ -->
+    <section class="section" aria-labelledby="overview-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="overview-heading">Overview</h2>
+        </div>
+        <p class="measure reveal">
+          VITA is a personal job-search companion — a single place to track
+          applications, manage resumes, and prepare for interviews, instead
+          of juggling spreadsheets, saved documents, and scattered browser
+          tabs. It's built for job seekers, particularly students and
+          early-career applicants, doing the day-to-day work of a search:
+          sending applications, tracking where each one stands, and getting
+          ready for interviews without losing momentum.
+        </p>
+      </div>
+    </section>
+
+    <!-- =============================== PROBLEM ============================ -->
+    <section class="section" aria-labelledby="problem-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="problem-heading">The problem</h2>
+        </div>
+        <p class="measure reveal">
+          Job searching means managing a lot of moving pieces at once —
+          resumes, applications, interview prep — usually spread across a
+          spreadsheet, a resume folder, and whatever job board sent the
+          last email. Nothing connects those pieces together, so it's easy
+          to lose track of where an application stands or what needs to
+          happen next. On top of that, most job-search tools are built like
+          clinical dashboards that track outcomes without much regard for
+          how discouraging a long search can feel.
+        </p>
+        <p class="measure reveal">
+          <em>This is based on my own experience going through a job
+          search, rather than formal user research — I haven't run
+          structured interviews or usability studies on this yet.</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- =============================== APPROACH ============================ -->
+    <section class="section" aria-labelledby="approach-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="approach-heading">The approach</h2>
+        </div>
+        <p class="measure reveal">
+          I wanted VITA to feel like a companion, not a scoreboard —
+          something that supports momentum instead of just recording
+          outcomes. Design priorities:
+        </p>
+        <ul class="goal-list reveal">
+          <li>Keep resumes, applications, and interview prep connected instead of siloed</li>
+          <li>Encouraging language — an application can be marked "Not this time" instead of "Rejected," which feels less punishing in a process that already has a lot of rejection built in</li>
+          <li>Clear information hierarchy, so it's obvious what needs attention next</li>
+          <li>Enough structure to stay organized without the tool feeling like more homework</li>
+          <li>Accessible, responsive, and maintainable from the start, not bolted on later</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== DESIGN/UX ============================ -->
+    <section class="section" aria-labelledby="design-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="design-heading">Design &amp; UX</h2>
+        </div>
+        <p class="measure reveal">
+          The interface is organized around a small set of core areas — a
+          dashboard, resumes, a resume scanner, an application tracker, a
+          portfolio section, and interview prep — rather than one dense,
+          everything-at-once view. The visual design was built as a custom
+          system specifically for VITA, rather than pulled from a UI kit,
+          so the "calm companion" feeling stays consistent throughout
+          instead of being layered on top of default components.
+        </p>
+        <div class="media-placeholder reveal" role="img" aria-label="Placeholder for a VITA interface screenshot">
+          [Project screenshot goes here]
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= KEY FEATURES ========================== -->
+    <section class="section" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="features-heading">Key features</h2>
+        </div>
+        <div class="feature-grid reveal">
+          <div class="feature">
+            <h3>Dashboard</h3>
+            <p>A home base that surfaces what's active and needs attention, instead of requiring a trip through every section to find it.</p>
+          </div>
+          <div class="feature">
+            <h3>Resume management with AI parsing</h3>
+            <p>Resumes are parsed automatically so their content becomes structured, reusable data instead of a static file.</p>
+          </div>
+          <div class="feature">
+            <h3>Resume scanner</h3>
+            <p>Checks a resume against a specific job posting to help tailor it, rather than sending the same version everywhere.</p>
+          </div>
+          <div class="feature">
+            <h3>Application tracker</h3>
+            <p>Tracks where each application actually stands, using language that doesn't treat a "no" as a dead end.</p>
+          </div>
+          <div class="feature">
+            <h3>Interview prep</h3>
+            <p>A dedicated space to prepare for interviews tied to a specific application, instead of prepping in the abstract.</p>
+          </div>
+          <div class="feature">
+            <h3>Portfolio</h3>
+            <p>A place to keep portfolio-relevant material connected to the rest of the job-search process.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= TECHNICAL IMPLEMENTATION =================== -->
+    <section class="section" aria-labelledby="technical-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="technical-heading">Technical implementation</h2>
+        </div>
+        <p class="measure reveal">
+          VITA is a full-stack app: a React (Vite) frontend talking to a
+          Node.js backend, with PostgreSQL as the database across a schema
+          of about ten related tables — resumes, applications, interview
+          prep, and more — modeled as connected data rather than separate,
+          disconnected records. Authentication uses JWTs. AI-assisted
+          features, like resume parsing, call the Anthropic API.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================= CHALLENGES & SOLUTIONS ==================== -->
+    <section class="section" aria-labelledby="challenges-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="challenges-heading">Challenges &amp; solutions</h2>
+        </div>
+        <div class="reveal">
+          <div class="challenge-block">
+            <h3>Challenge: local PostgreSQL environment conflicts</h3>
+            <p>My machine had multiple competing PostgreSQL installations and versions, which caused connection and version-mismatch issues that were confusing to debug — the kind of problem that has nothing to do with the actual app but can stall progress for a while.</p>
+            <p class="challenge-label">Solution</p>
+            <p>I tracked down and resolved the competing installations so the project could reliably connect to the right PostgreSQL instance, and documented the fix instead of solving it from memory next time.</p>
+            <p class="challenge-label">Result</p>
+            <p>A stable local setup, and a clearer mental model of how PostgreSQL installations can conflict on macOS — something I now check for early on any new project.</p>
+          </div>
+          <div class="challenge-block">
+            <h3>Challenge: making status updates feel encouraging instead of punishing</h3>
+            <p>A lot of job-search tools describe outcomes in blunt, clinical terms — "Rejected," "Declined" — which can be discouraging over a long search.</p>
+            <p class="challenge-label">Solution</p>
+            <p>I chose more neutral, momentum-oriented language throughout the app — for example, "Not this time" instead of "Rejected" — so the product doesn't read like it's keeping score against the user.</p>
+            <p class="challenge-label">Result</p>
+            <p><em>This is a design decision I'm still refining — I don't have user feedback on it yet, since VITA isn't in front of other users.</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACCESSIBILITY & RESPONSIVE ==================== -->
+    <section class="section" aria-labelledby="a11y-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="a11y-heading">Accessibility &amp; responsive design</h2>
+        </div>
+        <p class="measure reveal">
+          VITA is still in development, so accessibility work is ongoing
+          rather than finished:
+        </p>
+        <ul class="goal-list reveal">
+          <li>Semantic HTML and heading structure throughout</li>
+          <li>Visible focus states on interactive elements</li>
+          <li>Responsive layouts for the core dashboard and tracker views</li>
+          <li><em>A full keyboard-navigation and screen-reader pass is still on the to-do list, not yet complete</em></li>
+          <li><em>Reduced-motion support and a color-contrast audit specific to VITA are planned but not yet verified</em></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================ WHAT I LEARNED ========================= -->
+    <section class="section" aria-labelledby="learned-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="learned-heading">What I learned</h2>
+        </div>
+        <p class="measure reveal">
+          Modeling resumes, applications, and interview prep as connected
+          data — rather than separate features bolted together — forced me
+          to think through the schema much earlier than I would have on a
+          smaller project; about ten related tables ended up feeling like
+          the right level of structure. I also learned that the local
+          PostgreSQL conflicts I kept running into weren't a one-off fluke
+          — documenting the fix properly saved me from re-debugging the
+          exact same issue on a later project. On the product side,
+          choosing language like "Not this time" over "Rejected" made me
+          pay much closer attention to tone as a UX decision, not just a
+          copywriting afterthought — small wording changes really do
+          change how a tool feels to use.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================== FUTURE IMPROVEMENTS ======================= -->
+    <section class="section" aria-labelledby="future-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="future-heading">Future improvements</h2>
+        </div>
+        <ul class="goal-list reveal">
+          <li>Finish a full accessibility pass (screen reader and keyboard testing)</li>
+          <li>Add reduced-motion support specific to VITA's interface</li>
+          <li>Usability testing with real job seekers</li>
+          <li>Deploy a live demo</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== FINAL CTA ============================ -->
+    <section class="section case-cta" aria-labelledby="case-cta-heading">
+      <div class="container">
+        <h2 id="case-cta-heading">Want to see it in action?</h2>
+        <p class="contact-lede">
+          VITA is still under active development. The code is the best
+          place to look for now — a live demo is on the way.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-secondary" href="#">View Source Code</a>
+          <a class="btn-text" href="../index.html#work">&larr; Back to Work</a>
+        </div>
+        <!-- Add a "View Live Project" button here once a demo exists -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Designed &amp; built by Maria · <span data-current-year>2026</span></p>
+      <p>Made with HTML, CSS &amp; JavaScript ♥</p>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
