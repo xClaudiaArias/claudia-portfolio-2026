@@ -136,7 +136,7 @@
         </div>
         <p class="measure reveal">
           Job searching means managing a lot of moving pieces at once —
-          resumes, applications, interview prep — usually spread across a
+          resumes, applications, interview prep,  usually spread across a
           spreadsheet, a resume folder, and whatever job board sent the
           last email. Nothing connects those pieces together, so it's easy
           to lose track of where an application stands or what needs to
@@ -165,7 +165,7 @@
         </p>
         <ul class="goal-list reveal">
           <li>Keep resumes, applications, and interview prep connected instead of siloed</li>
-          <li>Encouraging language — an application can be marked "Not this time" instead of "Rejected," which feels less punishing in a process that already has a lot of rejection built in</li>
+          <li>Encouraging language, an application can be marked "Not this time" instead of "Rejected," which feels less punishing in a process that already has a lot of rejection built in</li>
           <li>Clear information hierarchy, so it's obvious what needs attention next</li>
           <li>Enough structure to stay organized without the tool feeling like more homework</li>
           <li>Accessible, responsive, and maintainable from the start, not bolted on later</li>
@@ -182,7 +182,7 @@
         <p class="measure reveal">
           The interface is organized around a small set of core areas — a
           dashboard, resumes, a resume scanner, an application tracker, a
-          portfolio section, and interview prep — rather than one dense,
+          portfolio section, and interview prep, rather than one dense,
           everything-at-once view. The visual design was built as a custom
           system specifically for VITA, rather than pulled from a UI kit,
           so the "calm companion" feeling stays consistent throughout
@@ -238,8 +238,8 @@
         <p class="measure reveal">
           VITA is a full-stack app: a React (Vite) frontend talking to a
           Node.js backend, with PostgreSQL as the database across a schema
-          of about ten related tables — resumes, applications, interview
-          prep, and more — modeled as connected data rather than separate,
+          of about ten related tables, resumes, applications, interview
+          prep, and more modeled as connected data rather than separate,
           disconnected records. Authentication uses JWTs. AI-assisted
           features, like resume parsing, call the Anthropic API.
         </p>
@@ -259,15 +259,15 @@
             <p class="challenge-label">Solution</p>
             <p>I tracked down and resolved the competing installations so the project could reliably connect to the right PostgreSQL instance, and documented the fix instead of solving it from memory next time.</p>
             <p class="challenge-label">Result</p>
-            <p>A stable local setup, and a clearer mental model of how PostgreSQL installations can conflict on macOS — something I now check for early on any new project.</p>
+            <p>A stable local setup, and a clearer mental model of how PostgreSQL installations can conflict on macOS, something I now check for early on any new project.</p>
           </div>
           <div class="challenge-block">
             <h3>Challenge: making status updates feel encouraging instead of punishing</h3>
-            <p>A lot of job-search tools describe outcomes in blunt, clinical terms — "Rejected," "Declined" — which can be discouraging over a long search.</p>
+            <p>A lot of job-search tools describe outcomes in blunt, clinical terms, "Rejected," "Declined", which can be discouraging over a long search.</p>
             <p class="challenge-label">Solution</p>
-            <p>I chose more neutral, momentum-oriented language throughout the app — for example, "Not this time" instead of "Rejected" — so the product doesn't read like it's keeping score against the user.</p>
+            <p>I chose more neutral, momentum-oriented language throughout the app, for example, "Not this time" instead of "Rejected", so the product doesn't read like it's keeping score against the user.</p>
             <p class="challenge-label">Result</p>
-            <p><em>This is a design decision I'm still refining — I don't have user feedback on it yet, since VITA isn't in front of other users.</em></p>
+            <p><em>This is a design decision I'm still refining, I don't have user feedback on it yet, since VITA isn't in front of other users.</em></p>
           </div>
         </div>
       </div>
@@ -301,7 +301,7 @@
         </div>
         <p class="measure reveal">
           Modeling resumes, applications, and interview prep as connected
-          data — rather than separate features bolted together — forced me
+          data rather than separate features bolted together forced me
           to think through the schema much earlier than I would have on a
           smaller project; about ten related tables ended up feeling like
           the right level of structure. I also learned that the local
@@ -310,7 +310,7 @@
           exact same issue on a later project. On the product side,
           choosing language like "Not this time" over "Rejected" made me
           pay much closer attention to tone as a UX decision, not just a
-          copywriting afterthought — small wording changes really do
+          copywriting afterthought, small wording changes really do
           change how a tool feels to use.
         </p>
       </div>
@@ -337,7 +337,7 @@
         <h2 id="case-cta-heading">Want to see it in action?</h2>
         <p class="contact-lede">
           VITA is still under active development. The code is the best
-          place to look for now — a live demo is on the way.
+          place to look for now, a live demo is on the way.
         </p>
         <div class="hero-ctas">
           <a class="btn btn-secondary" href="#">View Source Code</a>
