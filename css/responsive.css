@@ -1,5 +1,3 @@
-
-
 /* Small phones */
 @media (max-width: 400px) {
   .hero-ctas {
@@ -24,14 +22,14 @@
   }
 }
 
-/* Landscape phones — hero shouldn't force a huge scroll before CTAs */
+/* Landscape phones */
 @media (max-height: 480px) and (orientation: landscape) {
   .hero {
     padding-block: var(--space-lg);
   }
 }
 
-/* Print — flatten to something legible on paper (e.g. printing a resume page) */
+/* Print */
 @media print {
   .site-header,
   .theme-toggle,

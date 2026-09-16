@@ -61,20 +61,20 @@ ul, ol {
   list-style: none;
 }
 
-/* ---- Selection ---- */
+/*  Selection  */
 ::selection {
   background: var(--color-accent);
   color: var(--color-accent-contrast);
 }
 
-/* ---- Focus states — always visible, never suppressed ---- */
+/*  Focus states — always visible, never suppressed  */
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
 
-/* ---- Skip link ---- */
+/*  Skip link  */
 .skip-link {
   position: absolute;
   top: -100%;
@@ -94,7 +94,7 @@ ul, ol {
   top: var(--space-sm);
 }
 
-/* ---- Screen-reader only utility ---- */
+/*  Screen-reader only utility  */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -107,7 +107,7 @@ ul, ol {
   border: 0;
 }
 
-/* ---- Reduced motion — respected globally ---- */
+/*  Reduced motion — respected globally  */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -123,7 +123,7 @@ ul, ol {
   }
 }
 
-/* ---- Shared layout primitives ---- */
+/*  Shared layout primitives  */
 .container {
   width: 100%;
   max-width: var(--content-width);
