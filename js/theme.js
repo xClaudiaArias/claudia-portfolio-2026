@@ -1,8 +1,3 @@
-/**
- * theme.js
- * Handles light/dark theming
- */
-
 const STORAGE_KEY = "portfolio-theme";
 
 function getStoredTheme() {

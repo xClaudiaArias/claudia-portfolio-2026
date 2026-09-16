@@ -1,7 +1,3 @@
-/**
- * navigation.js
- */
-
 function initMobileNav() {
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
